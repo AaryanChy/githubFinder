@@ -3,6 +3,7 @@ import UserItem from "./UserItem";
 import { GithubContext } from "../../context/github/GithubContex";
 const UserResults = () => {
   const { users, loading } = useContext(GithubContext);
+  console.log(users);
   return !loading ? (
     <div className='grid grid-cols-1 gap-8 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2'>
       {users.map((users) => (
